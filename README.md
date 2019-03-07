@@ -28,8 +28,8 @@ python setup.py install --home="."
 ```
 
 ### 4 Processing training datas
-*　Ｔhe point cloud decimation <br>
-*　views and images generation <br>
+* Ｔhe point cloud decimation <br>
+* views and images generation <br>
 ```python
 python3 sem3d_gen_images.py --config config.json 
 ```
