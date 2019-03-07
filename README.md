@@ -1,24 +1,25 @@
 # Large-scale_Point_Cloud_Semantic_Segmentation
 ### Progection Fusion
+本项目是基于snapnet网络在semantic３Ｄ数据上训练得到的点云语义分割网络．该网络是从标注好的点云作为对象，生成用于训练的二维图像．并集成其他专有图像语义分割网络，在生成的图像上进行训练．当处理新的点云数据时网络会自动在点云上生成ＲＧＢ图像数据，并交由二维语义分割网络进行分割，最终又将二维分割的结果返投影至点云上实现对每一个点的标注．
+下面的这个ＧＩＦ是网络分割后的结果
 <br>
 
 ### ShapeNet & Semantic 3D dataset
-* We pick many suitable snapshots of the point cloud. We generate two types of images: a Red-Green-Blue (RGB) view and a depth composite view containing geometric features. <br>
-* We then perform a pixel-wise labeling of each pair of 2D snapshots using fully convolutional networks. Different architectures are tested to achieve a profitable fusion of our heterogeneous inputs. <br>
-* Finally, we perform fast back-projection of the label predictions in the 3D space using efficient buffering to label every 3D point. Experiments show that our method is suitable for various types of point clouds such as Lidar or photogrammetric data.
+#### ShapeNet
+#### Semantic 3D dataset
 <br>
 
 ### Operating Environment
-#### C++：　<br>
+#### C++：　
 * Cython
 * PCL
 * OpenMP
 * NanoFlann: nanoflann.hpp should be included in the include directory
 * Eigen: Eigen should also be included in the include directory
 
-#### Python: <br>
+#### Python: 
 * TensorFlow
-* TQDM, Scipy, Numpy
+* TQDM(进度条), Scipy, Numpy
 <br>
 
 ### Building
@@ -26,6 +27,8 @@
 cd pointcloud_tools
 python setup.py install --home="."
 ```
+<br>
+
 ### Configuration file
 ```python
 {
@@ -67,6 +70,7 @@ python setup.py install --home="."
     "output_directory":"path_to_output_product_directory"
 }
 ```
+<br>
 
 ### Processing training datas
 * Ｔhe point cloud decimation <br>
@@ -74,6 +78,7 @@ python setup.py install --home="."
 ```python
 python3 sem3d_gen_images.py --config config.json 
 ```
+<br>
 
 ### Train the models (rgb, composite and fusion) from scratch
 ```python
