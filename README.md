@@ -33,7 +33,6 @@ python setup.py install --home="."
 ```python
 python3 sem3d_gen_images.py --config config.json 
 ```
-<br>
 
 ### 5 Train the models (rgb, composite and fusion) from scratch
 ```python
