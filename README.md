@@ -4,10 +4,18 @@
 <br>
 
 ### 2 ShapeNet & 
+* We pick many suitable snapshots of the point cloud. We generate two types of images: a Red-Green-Blue (RGB) view and a depth composite view containing geometric features. <br>
+* We then perform a pixel-wise labeling of each pair of 2D snapshots using fully convolutional networks. Different architectures are tested to achieve a profitable fusion of our heterogeneous inputs. <br>
+* Finally, we perform fast back-projection of the label predictions in the 3D space using efficient buffering to label every 3D point. Experiments show that our method is suitable for various types of point clouds such as Lidar or photogrammetric data.
 <br>
 <br>
 
 ### 3 Operating Environment
+#### C++：　<br>
+* Cython
+* PCL
+* OpenMP
+
 <br>
 <br>
 
