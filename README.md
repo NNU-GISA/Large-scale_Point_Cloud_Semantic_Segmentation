@@ -6,6 +6,7 @@
 <img width="430" height="250" src="https://github.com/ZGX010/Large-scale_Point_Cloud_Semantic_Segmentation/blob/master/doc/1.gif"/></div><img width="430" height="250" src="https://github.com/ZGX010/Large-scale_Point_Cloud_Semantic_Segmentation/blob/master/doc/2.gif"/></div>
 <br>
 
+
 ### ShapeNet & Semantic 3D dataset
 #### ShapeNet
 <div align=center><img width="850" height="220" src="https://github.com/ZGX010/Large-scale_Point_Cloud_Semantic_Segmentation/blob/master/doc/fllow.png"/></div>
@@ -26,9 +27,10 @@ http://www.semantic3d.net/view_dbase.php?chl=1
 * NanoFlann: nanoflann.hpp should be included in the include directory
 * Eigen: Eigen should also be included in the include directory
 
+
 #### Python: 
 * TensorFlow
-* TQDM(进度条), Scipy, Numpy
+* TQDM, Scipy, Numpy
 <br>
 
 ### Building
@@ -82,6 +84,7 @@ python setup.py install --home="."
 ```
 <br>
 
+
 ### Processing training datas
 * Ｔhe point cloud decimation <br>
 * views and images generation <br>
@@ -91,12 +94,14 @@ python3 sem3d_gen_images.py --config config.json
 ```
 <br>
 
+
 ### Train the models (rgb, composite and fusion) from scratch
 此时需要训练的是
 ```python
 python3 sem3d_train_tf.py --config config.json
 ```
 <br>
+
 
 ### semantic on decimated clouds
 * The semantic predictions on images <br>
@@ -106,6 +111,7 @@ python3 sem3d_test_backproj.py --config config.json
 ```
 <br>
 
+
 ### Assign a Label to original point
 * generate the files at the Semantic 3D format <br>
 * assign a label to each point of the original point cloud <br>
@@ -113,6 +119,7 @@ python3 sem3d_test_backproj.py --config config.json
 python3 sem3d_test_to_sem3D_labels.py --config config.json
 ```
 <br>
+
 
 ### 利用网络在新点上进行推理
 #### 对点云数据进行预处理
