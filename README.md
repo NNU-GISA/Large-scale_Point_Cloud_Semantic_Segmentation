@@ -16,22 +16,20 @@ SnapＮet's performance on the semantic 3D dataset is second only to SPGraph. It
 
 <div align=center><img width="850" height="220" src="https://github.com/ZGX010/Large-scale_Point_Cloud_Semantic_Segmentation/blob/master/doc/fllow.png"/></div>
 <br>
-<br>
 
 #### Semantic 3D dataset
 They provide training and test data as a compressed ascii text file format of {x, y, z, intensity, r, g, b}. The basic facts are provided in the form of a single column ascii file, where the row id of the class labels corresponds to the point. 7zip is used for compression and is available for Windows and Linux. <br>
-Data download link：　http://www.semantic3d.net/view_dbase.php?chl=1
+* Data download link：　http://www.semantic3d.net/view_dbase.php?chl=1
 <br>
 <br>
 
 ### Operating Environment
 #### C++：　
-* Cython
-* PCL　＝　
-* OpenMP　＝　
+* Cython=
+* PCL=　
+* OpenMP=
 * NanoFlann: nanoflann.hpp should be included in the include directory
 * Eigen: Eigen should also be included in the include directory
-<br>
 <br>
 
 #### Python: 
@@ -41,7 +39,7 @@ Data download link：　http://www.semantic3d.net/view_dbase.php?chl=1
 <br>
 
 ### Building
-pointcloud文件夹中放置了安装文件，在文件中运行pointcloud_tools脚本安装软件．
+
 ```python
 cd pointcloud_tools
 python setup.py install --home="."
@@ -96,7 +94,7 @@ python setup.py install --home="."
 ### Processing training datas
 * Ｔhe point cloud decimation <br>
 * views and images generation <br>
-请按照提供的训练数据下载地址，下载训练与测试数据．然后运行图像生成脚本生成的图像文件和对应的相机位置文件，这些文件将放置在对应的文件夹．
+The images that will be generated when running the image generation script and the corresponding camera location files will be placed in './'folder.
 ```python
 python3 sem3d_gen_images.py --config config.json 
 ```
@@ -129,7 +127,7 @@ python3 sem3d_test_to_sem3D_labels.py --config config.json
 <br>
 <br>
 
-### 利用网络在新点上进行推理
-#### 对点云数据进行预处理
-#### 将点云数据输入网络
+### Using the network to inference on new data
+#### Preprocessing point cloud data
+#### Ｉnference
 
