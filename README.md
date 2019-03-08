@@ -1,7 +1,7 @@
 # Large-scale_Point_Cloud_Semantic_Segmentation
 ### Progection Fusion
-本项目是基于snapnet网络在semantic３Ｄ数据上训练得到的点云语义分割网络．该网络是从标注好的点云作为对象，生成用于训练的二维图像．并集成其他专有图像语义分割网络，在生成的图像上进行训练．当处理新的点云数据时网络会自动在点云上生成ＲＧＢ图像数据，并交由二维语义分割网络进行分割，最终又将二维分割的结果返投影至点云上实现对每一个点的标注．
-下面的这个ＧＩＦ是网络分割后的结果
+This project is a point cloud semantic segmentation network trained by the snapnet network on semantic3D data. The network first generates images for training on the point cloud and then uses other image semantic segmentation networks to train on the images. When processing new point cloud data, RGB images are automatically generated on the point cloud, and these images are labeled by the image semantic segmentation network. The network backprojects the results of the image segmentation to the point cloud.
+The following GIF is the result of the network segmentation point cloud
 <br>
 <img width="430" height="250" src="https://github.com/ZGX010/Large-scale_Point_Cloud_Semantic_Segmentation/blob/master/doc/1.gif"/></div><img width="430" height="250" src="https://github.com/ZGX010/Large-scale_Point_Cloud_Semantic_Segmentation/blob/master/doc/2.gif"/></div>
 <br>
