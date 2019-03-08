@@ -5,19 +5,18 @@
 <br>
 <img width="430" height="250" src="https://github.com/ZGX010/Large-scale_Point_Cloud_Semantic_Segmentation/blob/master/doc/1.gif"/></div><img width="430" height="250" src="https://github.com/ZGX010/Large-scale_Point_Cloud_Semantic_Segmentation/blob/master/doc/2.gif"/></div>
 <br>
-
+<br>
 
 ### ShapeNet & Semantic 3D dataset
 #### ShapeNet
 <div align=center><img width="850" height="220" src="https://github.com/ZGX010/Large-scale_Point_Cloud_Semantic_Segmentation/blob/master/doc/fllow.png"/></div>
 snapenet在semantic 3D 数据集上的表现仅仅次于超点图网络，同时他是基于tensorflow上最好的网络．而后snapenet网络后来又推出了机器人版本用于目标检测．
 <br>
-
 #### Semantic 3D dataset
 训练与测试数据下载地址
 http://www.semantic3d.net/view_dbase.php?chl=1
 <br>
-
+<br>
 
 ### Operating Environment
 #### C++：　
@@ -26,11 +25,13 @@ http://www.semantic3d.net/view_dbase.php?chl=1
 * OpenMP　＝　
 * NanoFlann: nanoflann.hpp should be included in the include directory
 * Eigen: Eigen should also be included in the include directory
-
+<br>
+<br>
 
 #### Python: 
 * TensorFlow
 * TQDM, Scipy, Numpy
+<br>
 <br>
 
 ### Building
@@ -39,6 +40,7 @@ pointcloud文件夹中放置了安装文件，在文件中运行pointcloud_tools
 cd pointcloud_tools
 python setup.py install --home="."
 ```
+<br>
 <br>
 
 ### Configuration file
@@ -83,7 +85,7 @@ python setup.py install --home="."
 }
 ```
 <br>
-
+<br>
 
 ### Processing training datas
 * Ｔhe point cloud decimation <br>
@@ -93,7 +95,7 @@ python setup.py install --home="."
 python3 sem3d_gen_images.py --config config.json 
 ```
 <br>
-
+<br>
 
 ### Train the models (rgb, composite and fusion) from scratch
 此时需要训练的是
@@ -101,7 +103,7 @@ python3 sem3d_gen_images.py --config config.json
 python3 sem3d_train_tf.py --config config.json
 ```
 <br>
-
+<br>
 
 ### semantic on decimated clouds
 * The semantic predictions on images <br>
@@ -110,7 +112,7 @@ python3 sem3d_train_tf.py --config config.json
 python3 sem3d_test_backproj.py --config config.json
 ```
 <br>
-
+<br>
 
 ### Assign a Label to original point
 * generate the files at the Semantic 3D format <br>
@@ -119,7 +121,7 @@ python3 sem3d_test_backproj.py --config config.json
 python3 sem3d_test_to_sem3D_labels.py --config config.json
 ```
 <br>
-
+<br>
 
 ### 利用网络在新点上进行推理
 #### 对点云数据进行预处理
