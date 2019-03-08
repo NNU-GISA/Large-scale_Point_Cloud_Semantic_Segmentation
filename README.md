@@ -1,20 +1,25 @@
 # Large-scale_Point_Cloud_Semantic_Segmentation
 ### Progection Fusion
 This project is a point cloud semantic segmentation network trained by the snapnet network on semantic3D data. The network first generates images for training on the point cloud and then uses other image semantic segmentation networks to train on the images. When processing new point cloud data, RGB images are automatically generated on the point cloud, and these images are labeled by the image semantic segmentation network. The network backprojects the results of the image segmentation to the point cloud.
+<br>
 The following GIF is the result of the network segmentation point cloud
 <br>
+
 <img width="430" height="250" src="https://github.com/ZGX010/Large-scale_Point_Cloud_Semantic_Segmentation/blob/master/doc/1.gif"/></div><img width="430" height="250" src="https://github.com/ZGX010/Large-scale_Point_Cloud_Semantic_Segmentation/blob/master/doc/2.gif"/></div>
 <br>
 <br>
 
-### ShapeNet & Semantic 3D dataset
-#### ShapeNet
+### SnapNet & Semantic 3D dataset
+#### ShapNet
 <div align=center><img width="850" height="220" src="https://github.com/ZGX010/Large-scale_Point_Cloud_Semantic_Segmentation/blob/master/doc/fllow.png"/></div>
-snapenet在semantic 3D 数据集上的表现仅仅次于超点图网络，同时他是基于tensorflow上最好的网络．而后snapenet网络后来又推出了机器人版本用于目标检测．
 <br>
+
+SnapＮet's performance on the semantic 3D dataset is second only to SPGraph. It is the best network based on tensorflow in the field of point cloud segmentation. Then the snapnet network later introduced the robot version snapNet++ for target detection.
+<br>
+
 #### Semantic 3D dataset
-训练与测试数据下载地址
-http://www.semantic3d.net/view_dbase.php?chl=1
+They provide training and test data as a compressed ascii text file format of {x, y, z, intensity, r, g, b}. The basic facts are provided in the form of a single column ascii file, where the row id of the class labels corresponds to the point. 7zip is used for compression and is available for Windows and Linux. <br>
+Data download link：　http://www.semantic3d.net/view_dbase.php?chl=1
 <br>
 <br>
 
