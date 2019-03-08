@@ -10,17 +10,20 @@
 ### ShapeNet & Semantic 3D dataset
 #### ShapeNet
 <div align=center><img width="850" height="220" src="https://github.com/ZGX010/Large-scale_Point_Cloud_Semantic_Segmentation/blob/master/doc/fllow.png"/></div>
+snapenet在semantic 3D 数据集上的表现仅仅次于超点图网络，同时他是基于tensorflow上最好的网络．而后snapenet网络后来又推出了机器人版本用于目标检测．
 <br>
 <br>
 
 #### Semantic 3D dataset
+训练与测试数据下载地址
+http://www.semantic3d.net/view_dbase.php?chl=1
 <br>
 
 ### Operating Environment
 #### C++：　
 * Cython
-* PCL
-* OpenMP
+* PCL　＝　
+* OpenMP　＝　
 * NanoFlann: nanoflann.hpp should be included in the include directory
 * Eigen: Eigen should also be included in the include directory
 
@@ -30,6 +33,7 @@
 <br>
 
 ### Building
+pointcloud文件夹中放置了安装文件，在文件中运行pointcloud_tools脚本安装软件．
 ```python
 cd pointcloud_tools
 python setup.py install --home="."
@@ -82,12 +86,14 @@ python setup.py install --home="."
 ### Processing training datas
 * Ｔhe point cloud decimation <br>
 * views and images generation <br>
+请按照提供的训练数据下载地址，下载训练与测试数据．然后运行图像生成脚本生成的图像文件和对应的相机位置文件，这些文件将放置在对应的文件夹．
 ```python
 python3 sem3d_gen_images.py --config config.json 
 ```
 <br>
 
 ### Train the models (rgb, composite and fusion) from scratch
+此时需要训练的是
 ```python
 python3 sem3d_train_tf.py --config config.json
 ```
@@ -108,3 +114,8 @@ python3 sem3d_test_backproj.py --config config.json
 python3 sem3d_test_to_sem3D_labels.py --config config.json
 ```
 <br>
+
+### 利用网络在新点上进行推理
+#### 对点云数据进行预处理
+#### 将点云数据输入网络
+
