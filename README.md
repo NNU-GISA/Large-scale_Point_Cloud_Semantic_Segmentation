@@ -4,14 +4,12 @@
 下面的这个ＧＩＦ是网络分割后的结果
 <br>
 <img width="430" height="250" src="https://github.com/ZGX010/Large-scale_Point_Cloud_Semantic_Segmentation/blob/master/doc/1.gif"/></div><img width="430" height="250" src="https://github.com/ZGX010/Large-scale_Point_Cloud_Semantic_Segmentation/blob/master/doc/2.gif"/></div>
-
 <br>
 
 ### ShapeNet & Semantic 3D dataset
 #### ShapeNet
 <div align=center><img width="850" height="220" src="https://github.com/ZGX010/Large-scale_Point_Cloud_Semantic_Segmentation/blob/master/doc/fllow.png"/></div>
 snapenet在semantic 3D 数据集上的表现仅仅次于超点图网络，同时他是基于tensorflow上最好的网络．而后snapenet网络后来又推出了机器人版本用于目标检测．
-<br>
 <br>
 
 #### Semantic 3D dataset
