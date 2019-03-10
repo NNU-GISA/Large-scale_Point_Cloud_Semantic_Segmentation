@@ -25,9 +25,9 @@ They provide training and test data as a compressed ascii text file format of {x
 
 ### Operating Environment
 #### C++：　
-* Cython=
-* PCL=　
-* OpenMP=
+* Cython 0.29.1
+* PCL = 1.8
+* OpenMP
 * NanoFlann: nanoflann.hpp should be included in the include directory
 * Eigen: Eigen should also be included in the include directory
 <br>
@@ -35,10 +35,11 @@ They provide training and test data as a compressed ascii text file format of {x
 #### Python: 
 * TensorFlow
 * TQDM, Scipy, Numpy
+ues the pip install 
 <br>
 <br>
 
-### Building
+#### Building
 
 ```python
 cd pointcloud_tools
