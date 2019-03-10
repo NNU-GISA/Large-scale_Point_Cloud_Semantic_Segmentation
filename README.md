@@ -37,7 +37,6 @@ They provide training and test data as a compressed ascii text file format of {x
 * TQDM, Scipy, Numpy
 ues the pip install 
 <br>
-<br>
 
 #### Building
 
@@ -130,5 +129,6 @@ python3 sem3d_test_to_sem3D_labels.py --config config.json
 
 ### Using the network to inference on new data
 #### Preprocessing point cloud data
+
 #### Ｉnference
 
