@@ -106,7 +106,7 @@ python3 sem3d_gen_images.py --config config.json
 <br>
 
 ### Train the models (rgb, composite and fusion) from scratch
-此时需要训练的是
+当运行训练脚本事train_save文件将会被创建其中包含了经过抽稀的label点云与RGB点云，以及在这些点云上生成的二维影像图片，这些图片将被用来训练。
 ```python
 python3 sem3d_train_tf.py --config config.json
 ```
