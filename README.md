@@ -11,7 +11,7 @@ The following GIF is the result of the network segmentation point cloud
 
 ### SnapNet & Semantic 3D dataset
 #### ShapNet
-SnapＮet's performance on the semantic 3D dataset is second only to SPGraph. It is the best network based on tensorflow in the field of point cloud segmentation. Then the snapnet network later introduced the robot version snapNet++ for target detection.
+SnapNet's performance on the semantic 3D dataset is second only to SPGraph. It is the best network based on tensorflow in the field of point cloud segmentation. Then the snapnet network later introduced the robot version snapNet++ for target detection.
 <br>
 
 <div align=center><img width="850" height="220" src="https://github.com/ZGX010/Large-scale_Point_Cloud_Semantic_Segmentation/blob/master/doc/fllow.png"/></div>
@@ -94,10 +94,10 @@ python setup.py install --home="."
 <br>
 
 ### Processing training datas
-* Ｔhe point cloud decimation <br>
+* The point cloud decimation <br>
 * views and images generation <br>
 The images that will be generated when running the image generation script and the corresponding camera location files will be placed in './'folder.
-当运行训练脚本事train_save文件将会被创建其中包含了经过抽稀的label点云与RGB点云，以及在这些点云上生成的二维影像图片，这些图片将被用来训练。
+When the training script is run, the train_save file will be created containing the label point cloud and RGB point cloud, as well as the 2D image images generated on these point clouds, which will be used for training.
 ```python
 python3 sem3d_gen_images.py --config config.json 
 ```
