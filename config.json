@@ -1,0 +1,38 @@
+{
+    "train_input_dir":"/home/szu/Documents/snapnet/train",
+    "test_input_dir":"/home/szu/Documents/snapnet/test",
+    "train_results_root_dir":"/home/szu/Documents/snapnet/train_save",
+    "test_results_root_dir":"/home/szu/Documents/snapnet/test_save",
+    "images_dir":"images",
+
+    "training":true,
+
+    "imsize":224,
+    "voxel_size":0.1,
+
+    "train_cam_number":10,
+    "train_create_mesh" : true,
+    "train_create_views" : true,
+    "train_create_images" : true,
+
+    "test_cam_number":50,
+    "test_create_mesh" : true,
+    "test_create_views" : true,
+    "test_create_images" : true,
+
+    "vgg_weight_init" :"./vgg_weight/VGG_ILSVRC_16_layers.npy",
+    "batch_size" : 12,
+    "learning_rate" : 1e-4,
+    "epoch_nbr" : 100,
+    "label_nbr" : 10,
+    "input_ch" : 3,
+
+    "train_rgb" : true,
+    "train_composite" : true,
+    "train_fusion" : true,
+
+    "saver_directory_rgb" : "/home/szu/Documents/snapnet/rgb_save",
+    "saver_directory_composite" : "/home/szu/Documents/snapnet/composite_save",
+    "saver_directory_fusion" : "/home/szu/Documents/snapnet/fusion_save",
+    "output_directory":"/home/szu/Documents/snapnet/output_save"
+}
