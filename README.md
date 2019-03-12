@@ -22,8 +22,6 @@ They provide training and test data as a compressed ascii text file format of {x
 * Data download link：　http://www.semantic3d.net/view_dbase.php?chl=1
 <br>
 你需要将下载的点云数据txt和标签数据label对应的放在train文件夹中：
-
-
 <br>
 <br>
 
@@ -75,7 +73,7 @@ python setup.py install --home="."
     "test_create_views" : true,
     "test_create_images" : true,
 
-    "vgg_weight_init":"path_to_vgg_weights",
+    "vgg_weight_init":"path_to_vgg_weights.npy",
     "batch_size" : 24,
     "learning_rate" : 1e-4,
     "epoch_nbr" : 100,
@@ -135,5 +133,5 @@ python3 sem3d_test_to_sem3D_labels.py --config config.json
 ### Using the network to inference on new data
 #### Preprocessing point cloud data
 
-#### Ｉnference
+#### Inference
 
