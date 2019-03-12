@@ -115,6 +115,7 @@ python3 sem3d_train_tf.py --config config.json
 ### semantic on decimated clouds
 * The semantic predictions on images <br>
 * back-projection on the decimated clouds <br>
+This script will generate tagged point cloud data（ply）
 ```python
 python3 sem3d_test_backproj.py --config config.json
 ```
@@ -124,6 +125,7 @@ python3 sem3d_test_backproj.py --config config.json
 ### Assign a Label to original point
 * generate the files at the Semantic 3D format <br>
 * assign a label to each point of the original point cloud <br>
+This script marks the point of the corresponding row in the point cloud file as the Train ID.
 ```python
 python3 sem3d_test_to_sem3D_labels.py --config config.json
 ```
@@ -132,6 +134,25 @@ python3 sem3d_test_to_sem3D_labels.py --config config.json
 
 ### Using the network to inference on new data
 #### Preprocessing point cloud data
+First you need to use my las.py to convert your data into a model readable format.Modify the point cloud path in the script. <br>
+```python
+python las.py
+```
+<br>
+<br>
 
 #### Inference
-
+Modify 'trainng model = false' in the Config.json file. <br>
+Add new data names to the sem3d_gen_images.py, sem3d_test_backproj.py, sem3d_test_to_sem3D_labels.py scripts <br>
+Run the script to process the point cloud. <br>
+```python
+python3 sem3d_gen_images.py --config config.json 
+```
+Run the script to predict and output the ply file. <br>
+```python
+python3 sem3d_test_backproj.py --config config.json
+```
+Run the script to mark each point in the original point cloud. <br>
+```python
+python3 sem3d_test_to_sem3D_labels.py --config config.json
+```
