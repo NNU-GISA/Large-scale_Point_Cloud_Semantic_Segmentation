@@ -21,7 +21,7 @@ SnapNet's performance on the semantic 3D dataset is second only to SPGraph. It i
 They provide training and test data as a compressed ascii text file format of {x, y, z, intensity, r, g, b}. The basic facts are provided in the form of a single column ascii file, where the row id of the class labels corresponds to the point. 7zip is used for compression and is available for Windows and Linux. <br>
 * Data download link：　http://www.semantic3d.net/view_dbase.php?chl=1
 <br>
-你需要将下载的点云数据txt和标签数据label对应的放在train文件夹中：
+You need to put the downloaded point cloud data and tag data in the train folder.
 <br>
 <br>
 
@@ -105,7 +105,7 @@ python3 sem3d_gen_images.py --config config.json
 <br>
 
 ### Train the models (rgb, composite and fusion) from scratch
-
+Three files are generated during training to save the training results.'composite_save''fusion_save''rgb_save'
 ```python
 python3 sem3d_train_tf.py --config config.json
 ```
